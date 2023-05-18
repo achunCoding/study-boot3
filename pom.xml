@@ -7,6 +7,8 @@
     <modules>
         <module>boot3-dependencies</module>
         <module>boot3-gateway</module>
+        <module>boot3-framework</module>
+        <module>boot3-example</module>
     </modules>
     <version>${revision}</version>
 
@@ -41,6 +43,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>

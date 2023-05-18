@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.wycfight.cloud</groupId>
+        <artifactId>study-boot3</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>boot3-framework</artifactId>
+    <packaging>pom</packaging>
+    <url>https://www.wycfight.cn</url>
+    <modules>
+        <module>boot3-log-spring-boot-starter</module>
+    </modules>
+    <description>基础框架  包含封装的redis、log、mybaits ，以及一些业务如字典、oss等</description>
+
+
+
+</project>

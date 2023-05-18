@@ -15,6 +15,11 @@
         <spring.boot.version>3.0.6</spring.boot.version>
         <spring.cloud.version>2022.0.0</spring.cloud.version>
         <spring.cloud.alibaba.version>2022.0.0.0-RC2</spring.cloud.alibaba.version>
+
+        <!-- 常用工具包版本号  -->
+        <fastjson2.version>2.0.32</fastjson2.version>
+        <hutool-core.version>5.8.18</hutool-core.version>
+        <lombok.version>1.18.26</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -41,6 +46,20 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!--  常用的工具包 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-core</artifactId>
+                <version>${hutool-core.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 </project>
