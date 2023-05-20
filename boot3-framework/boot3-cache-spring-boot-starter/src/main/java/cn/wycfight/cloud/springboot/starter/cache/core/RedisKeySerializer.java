@@ -1,4 +1,4 @@
-package cn.wycfight.cloud.springboot.starter.cache;
+package cn.wycfight.cloud.springboot.starter.cache.core;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.InitializingBean;
