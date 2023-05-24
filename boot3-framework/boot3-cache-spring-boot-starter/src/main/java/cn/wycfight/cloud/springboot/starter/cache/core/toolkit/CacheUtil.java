@@ -24,7 +24,7 @@ public class CacheUtil {
         return Joiner.on(SPLICING_OPERATOR).join(keys);
     }
 
-    public static boolean isNullorEmpty(Object cacheValue) {
+    public static boolean isNullOrBlank(Object cacheValue) {
         return cacheValue == null || (cacheValue instanceof String && Strings.isNullOrEmpty((String) cacheValue));
     }
 }

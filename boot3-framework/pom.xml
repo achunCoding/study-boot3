@@ -15,6 +15,7 @@
     <modules>
         <module>boot3-log-spring-boot-starter</module>
         <module>boot3-cache-spring-boot-starter</module>
+        <module>boot3-base-spring-boot-starter</module>
     </modules>
     <description>基础框架  包含封装的redis、log、mybaits ，以及一些业务如字典、oss等</description>
 

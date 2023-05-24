@@ -21,10 +21,10 @@ public interface Cache {
 
     /**
      * 存放数据
-     * @param kye
+     * @param key
      * @param value
      */
-    void put(@NotBlank String kye, Object value);
+    void put(@NotBlank String key, Object value);
 
     /**
      * 如果 keys 全部不存在，则新增，返回 true，反之 false
