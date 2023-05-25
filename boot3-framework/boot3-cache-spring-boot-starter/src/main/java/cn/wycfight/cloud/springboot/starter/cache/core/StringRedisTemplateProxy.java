@@ -2,6 +2,9 @@ package cn.wycfight.cloud.springboot.starter.cache.core;
 
 import cn.wycfight.cloud.springboot.starter.base.core.Singleton;
 import cn.wycfight.cloud.springboot.starter.cache.config.RedisDistributedProperties;
+import cn.wycfight.cloud.springboot.starter.cache.core.function.CacheGetFilter;
+import cn.wycfight.cloud.springboot.starter.cache.core.function.CacheGetIfAbsent;
+import cn.wycfight.cloud.springboot.starter.cache.core.function.CacheLoader;
 import cn.wycfight.cloud.springboot.starter.cache.core.toolkit.CacheUtil;
 import cn.wycfight.cloud.springboot.starter.cache.core.toolkit.FastJson2Util;
 import com.alibaba.fastjson2.JSON;
@@ -17,6 +20,7 @@ import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scripting.support.ResourceScriptSource;
 
 import java.util.Collection;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
@@ -134,7 +138,9 @@ public class StringRedisTemplateProxy implements DistributedCache {
     @Override
     public void safePut(String key, Object value, long timeout, TimeUnit timeUnit, RBloomFilter<String> bloomFilter) {
         put(key, value, timeout, timeUnit);
-        bloomFilter.add(key);
+        if (!Objects.isNull(bloomFilter)) {
+            bloomFilter.add(key);
+        }
     }
 
     @Override
@@ -164,7 +170,7 @@ public class StringRedisTemplateProxy implements DistributedCache {
             redisScript.setResultType(Boolean.class);
             return redisScript;
         });
-        Boolean result = stringRedisTemplate.execute(actual, Lists.newArrayList(keys), redisProperties.getValueTimeUnit());
+        Boolean result = stringRedisTemplate.execute(actual, Lists.newArrayList(keys), redisProperties.getValueTimeout().toString());
         return result != null && result;
     }
 

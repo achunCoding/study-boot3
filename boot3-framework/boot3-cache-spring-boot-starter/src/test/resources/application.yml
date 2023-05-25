@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cache-test
+  data:
+    redis:
+      host: 127.0.0.1
+      password: 123456
+      port: 6379
+
+boot3:
+  cache:
+    redis:
+      bloom-filter:
+        default:
+          enabled: true
+          expected-insertions: 10000
+          false-probability: 0.01
+          name: cache_penetration_bloom_filter
+      prefix: '${spring.application.name}:'
+      value-timeout: 50000

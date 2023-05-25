@@ -12,7 +12,7 @@
     <properties>
         <revision>1.0.0-SNAPSHOT</revision>
         <!-- 统一依赖管理 -->
-        <spring.boot.version>3.0.6</spring.boot.version>
+        <spring.boot.version>3.1.0</spring.boot.version>
         <spring.cloud.version>2022.0.0</spring.cloud.version>
         <spring.cloud.alibaba.version>2022.0.0.0-RC2</spring.cloud.alibaba.version>
         <redisson-spring-boot-starter.version>3.21.1</redisson-spring-boot-starter.version>

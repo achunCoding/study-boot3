@@ -1,4 +1,4 @@
-package cn.wycfight.cloud.springboot.starter.cache.core;
+package cn.wycfight.cloud.springboot.starter.cache.core.function;
 
 @FunctionalInterface
 public interface CacheGetIfAbsent<T> {
