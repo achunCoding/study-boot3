@@ -13,7 +13,7 @@
         <revision>1.0.0-SNAPSHOT</revision>
         <!-- 统一依赖管理 -->
         <spring.boot.version>3.1.0</spring.boot.version>
-        <spring.cloud.version>2022.0.0</spring.cloud.version>
+        <spring.cloud.version>2022.0.3</spring.cloud.version>
         <spring.cloud.alibaba.version>2022.0.0.0-RC2</spring.cloud.alibaba.version>
         <redisson-spring-boot-starter.version>3.21.1</redisson-spring-boot-starter.version>
 
@@ -23,6 +23,11 @@
         <hutool-core.version>5.8.18</hutool-core.version>
         <lombok.version>1.18.26</lombok.version>
         <hibernate-validator.version>8.0.0.Final</hibernate-validator.version>
+
+        <!-- 基本依赖包配置 -->
+        <shardingsphere.jdbc.core.spring.boot.starter.version>5.2.1</shardingsphere.jdbc.core.spring.boot.starter.version>
+        <mysql.connector.java.version>8.0.33</mysql.connector.java.version>
+        <mybatis.plus.boot.starter.version>3.5.3.1</mybatis.plus.boot.starter.version>
     </properties>
 
     <dependencyManagement>
@@ -81,6 +86,38 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
             </dependency>
+
+            <!--  分库分表包引入 -->
+
+            <!-- https://mvnrepository.com/artifact/org.apache.shardingsphere/shardingsphere-jdbc-core-spring-boot-starter -->
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>
+                <version>${shardingsphere.jdbc.core.spring.boot.starter.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.java.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-transaction-base-seata-at</artifactId>
+                <version>${shardingsphere.jdbc.core.spring.boot.starter.version}</version>
+            </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.boot.starter.version}</version>
+            </dependency>
+
 
         </dependencies>
 
