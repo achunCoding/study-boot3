@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-@TableName(value = "order_item")
+@TableName(value = "t_order_item")
 public class OrderItem implements Serializable {
 
     @TableId(type = IdType.ASSIGN_ID, value = "item_id")

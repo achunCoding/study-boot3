@@ -13,7 +13,7 @@ import java.math.BigDecimal;
  * 订单信息
  */
 @Data
-@TableName("order")
+@TableName("t_order")
 public class Order implements Serializable {
     @TableId(type = IdType.ASSIGN_ID)
     private Long orderId;
