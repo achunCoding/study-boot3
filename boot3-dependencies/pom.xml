@@ -28,6 +28,7 @@
         <shardingsphere.jdbc.core.spring.boot.starter.version>5.2.1</shardingsphere.jdbc.core.spring.boot.starter.version>
         <mysql.connector.java.version>8.0.33</mysql.connector.java.version>
         <mybatis.plus.boot.starter.version>3.5.3.1</mybatis.plus.boot.starter.version>
+        <xxl.job.core.version>2.4.0</xxl.job.core.version>
     </properties>
 
     <dependencyManagement>
@@ -116,6 +117,14 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.boot.starter.version}</version>
+            </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/com.xuxueli/xxl-job-core -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl.job.core.version}</version>
             </dependency>
 
 
