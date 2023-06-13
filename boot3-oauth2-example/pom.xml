@@ -15,6 +15,7 @@
         <module>boot3-authorizationserver</module>
         <module>boot3-default-authorizationserver</module>
         <module>boot3-messages-resource</module>
+        <module>boot3-client</module>
     </modules>
 
     <properties>
