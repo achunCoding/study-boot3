@@ -27,16 +27,15 @@ spring:
                 - "refresh_token"
                 - "client_credentials"
               redirect-uris:
-                - "http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc"
-                - "http://127.0.0.1:8080/authorized"
+                - "http://127.0.0.1:10400/login/oauth2/code/messaging-client-oidc"
+                - "http://127.0.0.1:10400/authorized"
               post-logout-redirect-uris:
-                - "http://127.0.0.1:8080/logged-out"
+                - "http://127.0.0.1:10400/logged-out"
               scopes:
                 - "openid"
                 - "profile"
                 - "message.read"
                 - "message.write"
-                -
             require-authorization-consent: true   # 客户端请求访问是否需要授权同意
 
 
