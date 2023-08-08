@@ -10,6 +10,7 @@
         <module>boot3-framework</module>
         <module>boot3-example</module>
         <module>boot3-oauth2-example</module>
+        <module>boot3-elasticsearch-example</module>
     </modules>
     <version>${revision}</version>
 

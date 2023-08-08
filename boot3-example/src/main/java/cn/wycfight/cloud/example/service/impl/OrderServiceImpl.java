@@ -30,7 +30,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         for (OrderItem orderItem : orderItems) {
             orderItem.setOrderId(order.getOrderId());
         }
-        return orderItemService.saveBatch(orderItems);
+        orderItemService.saveBatch(orderItems);
+        int i = 1/0;
+        return true;
     }
 
     @Override
