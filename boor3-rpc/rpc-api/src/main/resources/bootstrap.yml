@@ -1,6 +1,6 @@
 spring:
   application:
-    name: rpc-user-provider
+    name: rpc-api-application
   cloud:
     nacos:
       discovery:
