@@ -11,6 +11,7 @@
         <module>boot3-example</module>
         <module>boot3-oauth2-example</module>
         <module>boot3-elasticsearch-example</module>
+        <module>boor3-rpc</module>
     </modules>
     <version>${revision}</version>
 
