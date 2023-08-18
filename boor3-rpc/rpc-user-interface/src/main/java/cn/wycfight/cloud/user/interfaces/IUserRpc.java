@@ -1,5 +1,7 @@
 package cn.wycfight.cloud.user.interfaces;
 
+import cn.wycfight.cloud.user.dto.UserDTO;
+
 /**
  * @Classname IUserRpc
  * @Description 用户中台RPC提供者
@@ -9,4 +11,11 @@ package cn.wycfight.cloud.user.interfaces;
 public interface IUserRpc {
 
     String test();
+
+    /**
+     * 通过用户Id查询用户信息
+     * @param userId 用户Id
+     * @return
+     */
+    UserDTO getUserById(Long userId);
 }

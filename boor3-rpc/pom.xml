@@ -15,6 +15,7 @@
         <module>rpc-user-provider</module>
         <module>rpc-user-interface</module>
         <module>rpc-api</module>
+        <module>rpc-common-interface</module>
     </modules>
 
 </project>
