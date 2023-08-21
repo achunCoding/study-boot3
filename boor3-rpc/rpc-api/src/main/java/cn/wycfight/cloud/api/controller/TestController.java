@@ -22,7 +22,7 @@ public class TestController {
 
     @RequestMapping("/dubbo")
     public String dubbo() {
-        System.out.println(iUserRpc.test());
+        System.out.println(iUserRpc.getUserById(1L));
         return "success";
     }
 }

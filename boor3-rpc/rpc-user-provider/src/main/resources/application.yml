@@ -1,25 +1,37 @@
 spring:
   shardingsphere:
     datasource:
+      names: demo
       demo:
         driver-class-name: com.mysql.cj.jdbc.Driver
         jdbc-url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&useSSL=false
         password: 123456
         type: com.zaxxer.hikari.HikariDataSource
         username: root
-      names: demo
     rules:
       sharding:
         sharding-algorithms:
           t_user_sharding_by_mod_algorithm:
+            type: INLINE
             props:
-              sharding-count: 100
-            type: MOD
+              algorithm-expression: t_user_${(user_id % 100).toString().padLeft(2,'0')}
         tables:
           t_user:
-            actual-data-nodes: t_user_$->{0..99}
+            actual-data-nodes: demo.t_user_${(0..99).collect(){it.toString().padLeft(2,'0')}}
             table-strategy:
               standard:
                 sharding-algorithm-name: t_user_sharding_by_mod_algorithm
                 sharding-column: user_id
+    props:
+      sql-show: true
 
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://82.157.161.202:3306/demo?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&useSSL=false
+#    type: com.zaxxer.hikari.HikariDataSource
+#    username: root
+#    password: chun_fight
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

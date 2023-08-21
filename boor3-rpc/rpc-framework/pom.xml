@@ -5,18 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.wycfight.cloud</groupId>
-        <artifactId>study-boot3</artifactId>
+        <artifactId>boor3-rpc</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>boor3-rpc</artifactId>
     <packaging>pom</packaging>
+    <artifactId>rpc-framework</artifactId>
+
+
     <modules>
-        <module>rpc-user-provider</module>
-        <module>rpc-user-interface</module>
-        <module>rpc-api</module>
-        <module>rpc-common-interface</module>
-        <module>rpc-framework</module>
+        <module>rpc-framework-redis-starter</module>
     </modules>
 
 </project>

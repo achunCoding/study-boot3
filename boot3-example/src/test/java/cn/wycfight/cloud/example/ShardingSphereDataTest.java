@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,5 +79,11 @@ public class ShardingSphereDataTest {
         orderItems.add(orderItem2);
         orderDTO.setOrderItems(orderItems);
         orderItemService.howToTransaction(orderItems);
+    }
+
+    @Test
+    public void testMonth() {
+        String s = new BigDecimal("528").divide(new BigDecimal("70"), 2, RoundingMode.UP).toPlainString();
+        System.out.println(s);
     }
 }

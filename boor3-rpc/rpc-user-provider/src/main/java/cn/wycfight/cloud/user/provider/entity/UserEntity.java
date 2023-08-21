@@ -27,7 +27,7 @@ public class UserEntity {
     private Integer sex;
     private Integer workCity;
     private Integer bornCity;
-    private Date bornDate;
+    private Date bornTime;
     private Date createTime;
     private Date updateTime;
 }
